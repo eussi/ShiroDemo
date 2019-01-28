@@ -1,4 +1,4 @@
-package com.eussi.shiro;
+package com.eussi.shiro.realm;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
@@ -24,7 +24,7 @@ public class _02_SimpleRealm2 implements Realm {
         String username = (String)token.getPrincipal(); //得到用户名
         String password = new String((char[])token.getCredentials()); //得到密码
 
-        if(!"wangxm".equals(username)) {
+        if(!"wangxm2".equals(username)) {
             throw new UnknownAccountException("用户名错误"); //如果用户名错误
         }
         if(!"12345".equals(password)) {

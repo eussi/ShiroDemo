@@ -13,12 +13,12 @@ import org.junit.Test;
 /**
  * Created by wangxueming on 2019/1/28.
  */
-public class _03_MultiImplRealmTest {
+public class _04_JDBCRealmTest {
     @Test
-    public void testMultiImplRealm() {
+    public void testHelloworld() {
         //1、获取SecurityManager工厂，使用ini配置文件初始化
         Factory<SecurityManager> factory =
-                new IniSecurityManagerFactory("classpath:_03_shiro-multi-realm.ini");
+                new IniSecurityManagerFactory("classpath:_04_shiro-jdbc-realm.ini");
 
         //2、将SecurityManager实例并绑定给SecurityUtils
         SecurityManager securityManager = factory.getInstance();

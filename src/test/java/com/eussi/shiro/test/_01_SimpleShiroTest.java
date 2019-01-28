@@ -30,7 +30,7 @@ public class _01_SimpleShiroTest {
 //        UsernamePasswordToken token = new UsernamePasswordToken("wangxm", "12345");
         //login fail：Submitted credentials for token [org.apache.shiro.authc.UsernamePasswordToken - wangxm, rememberMe=false] did not match the expected credentials.
 
-        UsernamePasswordToken token = new UsernamePasswordToken("wangxm", "1234");
+        UsernamePasswordToken token = new UsernamePasswordToken("wangxm", "12345");
         try {
             //4、登录，即身份验证
             subject.login(token);
