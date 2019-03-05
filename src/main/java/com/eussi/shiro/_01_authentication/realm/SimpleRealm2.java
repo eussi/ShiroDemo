@@ -1,4 +1,4 @@
-package com.eussi.shiro.realm;
+package com.eussi.shiro._01_authentication.realm;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
@@ -6,10 +6,10 @@ import org.apache.shiro.realm.Realm;
 /**
  * Created by wangxueming on 2019/1/28.
  */
-public class _05_SimpleRealm3 implements Realm {
+public class SimpleRealm2 implements Realm {
     @Override
     public String getName() {
-        return "_05_SimpleRealm3";
+        return "SimpleRealm2";
     }
 
     @Override
@@ -24,7 +24,7 @@ public class _05_SimpleRealm3 implements Realm {
         String username = (String)token.getPrincipal(); //得到用户名
         String password = new String((char[])token.getCredentials()); //得到密码
 
-        if(!"wangxm".equals(username)) {
+        if(!"wangxm2".equals(username)) {
             throw new UnknownAccountException("用户名错误"); //如果用户名错误
         }
         if(!"12345".equals(password)) {
@@ -33,6 +33,6 @@ public class _05_SimpleRealm3 implements Realm {
 //        throw new IncorrectCredentialsException("密码错误"); //如果密码错误
 
         //如果身份认证验证成功，返回一个AuthenticationInfo实现；
-        return new SimpleAuthenticationInfo(username + "@yeah.net", password, getName());
+        return new SimpleAuthenticationInfo(username, password, getName());
     }
 }

@@ -1,4 +1,4 @@
-package com.eussi.shiro.test;
+package com.eussi.shiro._01_authentication;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -13,12 +13,12 @@ import org.junit.Test;
 /**
  * Created by wangxueming on 2019/1/28.
  */
-public class _02_SimipleImplRealmTest {
+public class _04_JDBCRealmTest {
     @Test
-    public void testImplRealm() {
+    public void testHelloworld() {
         //1、获取SecurityManager工厂，使用ini配置文件初始化
         Factory<SecurityManager> factory =
-                new IniSecurityManagerFactory("classpath:_02_shiro-realm.ini");
+                new IniSecurityManagerFactory("classpath:_01_authentication/shiro-jdbc-realm.ini");
 
         //2、将SecurityManager实例并绑定给SecurityUtils
         SecurityManager securityManager = factory.getInstance();

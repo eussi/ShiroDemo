@@ -1,4 +1,4 @@
-package com.eussi.shiro.test;
+package com.eussi.shiro._01_authentication;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -11,14 +11,15 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
+ *
  * Created by wangxueming on 2019/1/28.
  */
-public class _03_MultiImplRealmTest {
+public class _01_SimpleShiroTest {
     @Test
-    public void testMultiImplRealm() {
+    public void testSimpleShiro() {
         //1、获取SecurityManager工厂，使用ini配置文件初始化
         Factory<SecurityManager> factory =
-                new IniSecurityManagerFactory("classpath:_03_shiro-multi-realm.ini");
+                new IniSecurityManagerFactory("classpath:_01_authentication/shiro.ini");
 
         //2、将SecurityManager实例并绑定给SecurityUtils
         SecurityManager securityManager = factory.getInstance();
@@ -26,7 +27,7 @@ public class _03_MultiImplRealmTest {
 
         //3、得到Subject并创建Token
         Subject subject = SecurityUtils.getSubject();
-//        UsernamePasswordToken token = new UsernamePasswordToken("wangxm", "12345");
+//        UsernamePasswordToken token = new UsernamePasswordToken("li", "12345");
         //login fail：Submitted credentials for token [org.apache.shiro.authc.UsernamePasswordToken - wangxm, rememberMe=false] did not match the expected credentials.
 
         UsernamePasswordToken token = new UsernamePasswordToken("wangxm", "12345");

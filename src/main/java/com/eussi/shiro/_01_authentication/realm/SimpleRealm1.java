@@ -1,4 +1,4 @@
-package com.eussi.shiro.realm;
+package com.eussi.shiro._01_authentication.realm;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
@@ -6,10 +6,10 @@ import org.apache.shiro.realm.Realm;
 /**
  * Created by wangxueming on 2019/1/28.
  */
-public class _02_SimpleRealm1 implements Realm {
+public class SimpleRealm1 implements Realm {
     @Override
     public String getName() {
-        return "_02_SimpleRealm1";
+        return "SimpleRealm1";
     }
 
     @Override
