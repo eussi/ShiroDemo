@@ -1,4 +1,4 @@
-package com.eussi.shiro.test;
+package com.eussi.shiro._02_authorization;
 
 import com.eussi.shiro.base.BaseTest;
 import junit.framework.Assert;
@@ -7,11 +7,11 @@ import org.junit.Test;
 /**
  * Created by wangxueming on 2019/1/29.
  */
-public class _08_AuthorizerTest extends BaseTest {
+public class _03_AuthorizerTest extends BaseTest {
 
     @Test
     public void testPermitted() {
-        login("classpath:_08_shiro-authorizer.ini", "wangxm", "12345");
+        login("classpath:_02_authorization/shiro-authorizer.ini", "wangxm", "12345");
         //判断拥有权限：user:create
         Assert.assertTrue(subject().isPermitted("user1:update"));
         Assert.assertTrue(subject().isPermitted("user2:update"));
@@ -27,7 +27,7 @@ public class _08_AuthorizerTest extends BaseTest {
 
     @Test
     public void testJdbcPermitted() {
-        login("classpath:_08_shiro-jdbc-authorizer.ini", "wangxm", "12345");
+        login("classpath:_02_authorization/shiro-jdbc-authorizer.ini", "wangxm", "12345");
         //判断拥有权限：user:create
         Assert.assertTrue(subject().isPermitted("user1:update"));
         Assert.assertTrue(subject().isPermitted("user2:update"));

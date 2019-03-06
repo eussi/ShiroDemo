@@ -1,4 +1,4 @@
-package com.eussi.shiro.test;
+package com.eussi.shiro._03_iniconfig;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import junit.framework.Assert;
@@ -21,11 +21,10 @@ import java.util.Arrays;
 /**
  * Created by wangxueming on 2019/1/30.
  */
-public class _09_NonConfigurationCreateTest {
+public class _01_NonConfigurationCreateTest {
 
     @Test
     public void testNonConfig() {
-
         DefaultSecurityManager securityManager = new DefaultSecurityManager();
 
         //设置authenticator
@@ -59,14 +58,12 @@ public class _09_NonConfigurationCreateTest {
         subject.login(token);
 
         Assert.assertTrue(subject.isAuthenticated());
-
     }
 
     @Test
     public void testConfig() {
-
         Factory<org.apache.shiro.mgt.SecurityManager> factory =
-                new IniSecurityManagerFactory("classpath:_09_shiro-config.ini");
+                new IniSecurityManagerFactory("classpath:_03_iniconfig/shiro-config.ini");
 
         org.apache.shiro.mgt.SecurityManager securityManager = factory.getInstance();
 
@@ -79,8 +76,5 @@ public class _09_NonConfigurationCreateTest {
         subject.login(token);
 
         Assert.assertTrue(subject.isAuthenticated());
-
-
-
     }
 }

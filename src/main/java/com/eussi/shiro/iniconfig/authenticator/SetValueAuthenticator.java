@@ -1,4 +1,4 @@
-package com.eussi.shiro.authenticator;
+package com.eussi.shiro.iniconfig.authenticator;
 
 import org.apache.shiro.authc.pam.ModularRealmAuthenticator;
 import org.apache.shiro.realm.Realm;
@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * Created by wangxueming on 2019/1/30.
  */
-public class _10_SetValueAuthenticator extends ModularRealmAuthenticator {
+public class SetValueAuthenticator extends ModularRealmAuthenticator {
 
     public void setBytes(byte[] bytes) {
         System.out.println(new String(bytes));

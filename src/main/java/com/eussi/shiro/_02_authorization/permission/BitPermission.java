@@ -1,4 +1,4 @@
-package com.eussi.shiro.permission;
+package com.eussi.shiro._02_authorization.permission;
 
 import com.alibaba.druid.util.StringUtils;
 import org.apache.shiro.authz.Permission;

@@ -1,5 +1,6 @@
-package com.eussi.shiro.permission;
+package com.eussi.shiro._02_authorization.permissionresolver;
 
+import com.eussi.shiro._02_authorization.permission.BitPermission;
 import org.apache.shiro.authz.Permission;
 import org.apache.shiro.authz.permission.PermissionResolver;
 import org.apache.shiro.authz.permission.WildcardPermission;

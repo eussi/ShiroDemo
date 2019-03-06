@@ -1,18 +1,17 @@
-package com.eussi.shiro.realm;
+package com.eussi.shiro._02_authorization.realm;
 
-import com.eussi.shiro.permission.BitPermission;
+import com.eussi.shiro._02_authorization.permission.BitPermission;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.authz.permission.WildcardPermission;
 import org.apache.shiro.realm.AuthorizingRealm;
-import org.apache.shiro.realm.Realm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 /**
  * Created by wangxueming on 2019/1/29.
  */
-public class _08_AuthorizingRealm4 extends AuthorizingRealm {
+public class AuthorizingRealmImpl extends AuthorizingRealm {
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {

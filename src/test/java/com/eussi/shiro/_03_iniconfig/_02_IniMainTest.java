@@ -1,4 +1,4 @@
-package com.eussi.shiro.test;
+package com.eussi.shiro._03_iniconfig;
 
 import junit.framework.Assert;
 import org.apache.shiro.SecurityUtils;
@@ -11,13 +11,13 @@ import org.junit.Test;
 /**
  * Created by wangxueming on 2019/1/30.
  */
-public class _10_IniMainTest {
+public class _02_IniMainTest {
 
     @Test
     public void test() {
 
         Factory<org.apache.shiro.mgt.SecurityManager> factory =
-                new IniSecurityManagerFactory("classpath:_10_shiro-config-main.ini");
+                new IniSecurityManagerFactory("classpath:_03_iniconfig/shiro-config-main.ini");
 
         org.apache.shiro.mgt.SecurityManager securityManager = factory.getInstance();
 

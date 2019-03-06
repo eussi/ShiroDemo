@@ -1,4 +1,4 @@
-package com.eussi.shiro.permission;
+package com.eussi.shiro._02_authorization.permissionresolver;
 
 import org.apache.shiro.authz.Permission;
 import org.apache.shiro.authz.permission.RolePermissionResolver;
