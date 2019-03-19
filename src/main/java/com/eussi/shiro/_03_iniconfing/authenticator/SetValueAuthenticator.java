@@ -1,4 +1,4 @@
-package com.eussi.shiro.iniconfig.authenticator;
+package com.eussi.shiro._03_iniconfing.authenticator;
 
 import org.apache.shiro.authc.pam.ModularRealmAuthenticator;
 import org.apache.shiro.realm.Realm;

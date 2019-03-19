@@ -1,4 +1,4 @@
-package com.eussi.shiro.realm;
+package com.eussi.shiro._04_encryptionanddecryption.realm;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -12,7 +12,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 /**
  * Created by wangxueming on 2019/1/30.
  */
-public class _12_PasswordRealm extends AuthorizingRealm {
+public class PasswordRealm extends AuthorizingRealm {
 
     private PasswordService passwordService;
 

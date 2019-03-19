@@ -1,4 +1,4 @@
-package com.eussi.shiro.test;
+package com.eussi.shiro._04_encryptionanddecryption;
 
 import com.eussi.shiro.base.BaseTest;
 import org.apache.commons.beanutils.BeanUtilsBean;
@@ -12,16 +12,16 @@ import org.junit.Test;
 /**
  * Created by wangxueming on 2019/1/30.
  */
-public class _12_PasswordTest extends BaseTest {
+public class _02_PasswordTest extends BaseTest {
 
     @Test
     public void testPasswordServiceWithMyRealm() {
-        login("classpath:_12_shiro-passwordservice.ini", "wangxm", "12345");
+        login("classpath:_04_encryptionanddecryption/shiro-passwordservice.ini", "wangxm", "12345");
     }
 
     @Test
     public void testPasswordServiceWithJdbcRealm() {
-        login("classpath:_12_shiro-jdbc-passwordservice.ini", "wu", "123");
+        login("classpath:_04_encryptionanddecryption/shiro-jdbc-passwordservice.ini", "wu", "123");
     }
 
     @Test
@@ -42,7 +42,7 @@ public class _12_PasswordTest extends BaseTest {
     @Test
     public void testHashedCredentialsMatcherWithMyRealm2() {
         //使用testGeneratePassword生成的散列密码
-        login("classpath:shiro-hashedCredentialsMatcher.ini", "liu", "123");
+        login("classpath:_04_encryptionanddecryption/shiro-hashedCredentialsMatcher.ini", "liu", "123");
     }
 
     @Test
@@ -51,7 +51,7 @@ public class _12_PasswordTest extends BaseTest {
         BeanUtilsBean.getInstance().getConvertUtils().register(new EnumConverter(), JdbcRealm.SaltStyle.class);
 
         //使用testGeneratePassword生成的散列密码
-        login("classpath:shiro-jdbc-hashedCredentialsMatcher.ini", "liu", "123");
+        login("classpath:_04_encryptionanddecryption/shiro-jdbc-hashedCredentialsMatcher.ini", "liu", "123");
     }
 
 
@@ -73,12 +73,14 @@ public class _12_PasswordTest extends BaseTest {
     }
 
     @Test(expected = ExcessiveAttemptsException.class)
-    public void testRetryLimitHashedCredentialsMatcherWithMyRealm() {
+    public void testRetryLimitHashedCredentialsMatcherWithMyRealm() throws InterruptedException {
         for(int i = 1; i <= 5; i++) {
             try {
-                login("classpath:shiro-retryLimitHashedCredentialsMatcher.ini", "liu", "234");
-            } catch (Exception e) {/*ignore*/}
+                login("classpath:_04_encryptionanddecryption/shiro-retryLimitHashedCredentialsMatcher.ini", "liu", "1234");
+            } catch (Exception e) {
+                /*ignore*/
+            }
         }
-        login("classpath:shiro-retryLimitHashedCredentialsMatcher.ini", "liu", "234");
+        login("classpath:_04_encryptionanddecryption/shiro-retryLimitHashedCredentialsMatcher.ini", "liu", "123");
     }
 }

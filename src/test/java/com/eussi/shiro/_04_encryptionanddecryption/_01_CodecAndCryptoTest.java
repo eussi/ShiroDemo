@@ -1,4 +1,4 @@
-package com.eussi.shiro.test;
+package com.eussi.shiro._04_encryptionanddecryption;
 
 import org.apache.shiro.codec.Base64;
 import org.apache.shiro.codec.CodecSupport;
@@ -18,7 +18,7 @@ import java.security.Key;
 /**
  * Created by wangxueming on 2019/1/30.
  */
-public class _11_CodecAndCryptoTest {
+public class _01_CodecAndCryptoTest {
     @Test
     public void testBase64() {
         String str = "hello";
